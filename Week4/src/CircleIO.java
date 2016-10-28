@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 /**
- * The program read in the number of square metres from the keyboard and convert the input from
- *square metres into square kilometres. Display the results using
- *System.out.println() and then System.out.printf().
- * 
+ * The program  calculate
+ *the circumference of a circle, its area and the volume of a sphere.
+ *Display the radius and the results in a clear format using System.out.println() and
+ *then System.out.printf().
  * @author Boguslaw Smolarczyk 1612761 
  * @version 24.10.16
  */
