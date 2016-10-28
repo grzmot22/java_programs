@@ -1,5 +1,14 @@
 import java.util.Scanner;
 
+/**
+ * The program read in the number of square metres from the keyboard and convert the input from
+ *square metres into square kilometres. Display the results using
+ *System.out.println() and then System.out.printf().
+ * 
+ * @author Boguslaw Smolarczyk 1612761 
+ * @version 24.10.16
+ */
+
 public class Circle {
 	
 		final static double PI = 3.142857;
