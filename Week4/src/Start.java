@@ -12,7 +12,7 @@ public class Start
 		System.out.println("Ex2");
 		ConversionDivisionIO obj2 = new ConversionDivisionIO();
 		System.out.println("Ex3");
-		Circle obj3 = new Circle();
+		CircleIO obj3 = new CircleIO();
 		System.out.println("Ex4");
 		MarkAverageIO obj4 =  new MarkAverageIO();
 	}
