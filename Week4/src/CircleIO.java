@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class CircleIO {
        
-               final static double PI = 3.142857;
+               final static double PI = 3.142857; //Define constant
                public CircleIO()
                {
                Scanner keyboard = new Scanner(System.in);
