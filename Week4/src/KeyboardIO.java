@@ -16,9 +16,9 @@ public class KeyboardIO {
 		Scanner keyboard = new Scanner(System.in);
 		
 		System.out.println("Type number ");
-		n1 = keyboard.nextInt();
-		n2 = n1 * 2;
-		System.out.println("Your number multipled by 2 is " +n2);
+		n1 = keyboard.nextInt(); //Collect number from user
+		n2 = n1 * 2; //multiply this number by 2
+		System.out.println("Your number multiplied  by 2 is " +n2); // Print the result
 	}
 
 }
