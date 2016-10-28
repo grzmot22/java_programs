@@ -1,3 +1,7 @@
+/* author grzmot22 24/10/2016
+* Program execute 4 another programs.
+*Use to execute all programs from week 4.
+*/
 
 public class Start 
 {
