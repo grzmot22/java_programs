@@ -9,10 +9,10 @@ import java.util.Scanner;
  * @version 24.10.16
  */
 
-public class Circle {
+public class CircleIO {
 	
 		final static double PI = 3.142857;
-		public Circle()
+		public CircleIO()
 		{
 		Scanner keyboard = new Scanner(System.in);
 		double radius = keyboard.nextDouble();
