@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * The program to input one integer, multiply its value by 2 and output the result.
  * 
- * @author Boguslaw Smolarczyk 1612761 
+ * @author Grzmot22
  * @version 24.10.16
  */
 

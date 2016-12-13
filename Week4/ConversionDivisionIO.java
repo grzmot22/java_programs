@@ -5,7 +5,7 @@ import java.util.Scanner;
  *square metres into square kilometres. Display the results using
  *System.out.println() and then System.out.printf().
  * 
- * @author Boguslaw Smolarczyk 1612761 
+ * @author Grzmot22
  * @version 24.10.16
  */
 

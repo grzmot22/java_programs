@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * The program read 3 doubles from the keyboard and calculate the average marks from
  *the three marks.  
- * @author Boguslaw Smolarczyk 1612761 
+ * @author Grzmot22
  * @version 24.10.16
  */
  

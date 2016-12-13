@@ -5,7 +5,7 @@ import java.util.Scanner;
  *the circumference of a circle, its area and the volume of a sphere.
  *Display the radius and the results in a clear format using System.out.println() and
  *then System.out.printf().
- * @author Boguslaw Smolarczyk 1612761 
+ * @author Grzmot22 
  * @version 24.10.16
  */
 
