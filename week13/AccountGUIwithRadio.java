@@ -19,27 +19,33 @@ import java.io.*;
 public class AccountGUIwithRadio extends JFrame {
 
     private Container con;
-    private String  name;
+    
+    private String name = "";
     private String address = "";
-    private String stBalance;
+    private String stBalance = "";
     private String gender;
+    
     private JLabel balanceLabel;
     private JLabel creditLabel;
-    private PrintWriter myWriter;
-    private BufferedReader myReader;
     private JLabel nameLabel;
     private JLabel addressLabel;
     private JLabel rButtonLabel;
     private JLabel rText;
     private JLabel error;
-
+    
     private JTextField balanceText;
     private JTextField creditText;
     private JTextField nameText;
     private JTextField addressText;
+    
     private JButton saveButton;
     private JButton submitButton;
     private JButton loadButton;
+    
+    private PrintWriter myWriter;
+    private BufferedReader myReader;
+   
+    
     /**
      * Constructor to set up things
      */
@@ -113,6 +119,9 @@ public class AccountGUIwithRadio extends JFrame {
         con.add(submitButton);
         con.add(error);
 
+        
+        
+        
         submitButton.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
@@ -145,70 +154,63 @@ public class AccountGUIwithRadio extends JFrame {
                                   }
         );
 
-        try {
-            myWriter = new PrintWriter(new FileOutputStream("Account.txt"));
-            saveButton.addActionListener(new ActionListener() {
-                                             public void actionPerformed(ActionEvent e) {
-                                                 myWriter.println(nameText.getText());
-                                                 myWriter.println(addressText.getText());
-                                                 myWriter.println(balanceText.getText());
-                                                 myWriter.println(creditText.getText());
-                                                 myWriter.println(gender);
-                                                 myWriter.close();
-                                             }
-                                         }
-            );
+        saveButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+           	 
+           	    try {
+					myWriter = new PrintWriter("Account.txt");
+				} catch (FileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+           	    
+                myWriter.println(nameText.getText());
+                myWriter.println(addressText.getText());
+                myWriter.println(balanceText.getText());
+                myWriter.println(creditText.getText());
+                myWriter.println(gender);
+                myWriter.close();
+            }
         }
-        catch (IOException e)
+        );
+        
+        loadButton.addActionListener(new ActionListener()
         {
-            System.out.println(e.getMessage());
-        }
-        try
-        {
-            myReader = new BufferedReader(new FileReader("Account.txt"));
-            loadButton.addActionListener(new ActionListener()
+            public void actionPerformed(ActionEvent e)
             {
-                public void actionPerformed(ActionEvent e)
+                try
                 {
-                    try
-                    {
-//                        System.out.println(myReader.readLine());
-//                        System.out.println(myReader.readLine());
-//                        System.out.println(myReader.readLine());
-//                        System.out.println(myReader.readLine());
-//                        System.out.println(myReader.readLine());
-                        nameText.setText(myReader.readLine());
-                        addressText.setText(myReader.readLine());
-                        balanceText.setText(myReader.readLine());
-                        creditText.setText(myReader.readLine());
-                        gender = myReader.readLine();
-                        if (gender  == "male") {
-                            mButton.setSelected(true);
-                            gender = "male";
-                            rText.setText("You are: " + gender + "!");
-                        }
-                        else if (gender == "female"){
-                            fButton.setSelected(true);
-                            gender = "female";
-                            rText.setText("You are: " + gender + "!");
+                	myReader = new BufferedReader(new FileReader("Account.txt"));
 
-                        }
-                        creditText.setText(myReader.readLine());
-                        gender = myReader.readLine();
-                        myReader.close();
+                    nameText.setText(myReader.readLine());
+                    addressText.setText(myReader.readLine());
+                    balanceText.setText(myReader.readLine());
+                    creditText.setText(myReader.readLine());
+                    gender = myReader.readLine();
+                    if (gender  == "male") {
+                        mButton.setSelected(true);
+                        gender = "male";
+                        rText.setText("You are: " + gender + "!");
+                    }
+                    else if (gender == "female"){
+                        fButton.setSelected(true);
+                        gender = "female";
+                        rText.setText("You are: " + gender + "!");
 
                     }
-                    catch (IOException ie)
-                    {
-                        error.setText("IO error");
-                    }
+                    creditText.setText(myReader.readLine());
+                    gender = myReader.readLine();
+                    myReader.close();
+
                 }
-            });
-        }
-        catch (IOException e)
-        {
-            System.out.println(e.getMessage());
-        }
+                catch (IOException ie)
+                {
+                    error.setText(ie.toString());
+                }
+            }
+        });
+        
+
         /*
        * Do some required layout stuff, tell Java to exit when we press the Close button
        */
