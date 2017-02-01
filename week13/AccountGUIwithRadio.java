@@ -72,7 +72,7 @@ public class AccountGUIwithRadio extends JFrame {
         submitButton = new JButton("Submit");
         loadButton = new JButton("Load");
         rButtonLabel = new JLabel("Choose one:");
-        rText = new JLabel("");
+        rText = new JLabel("Select gender.");
         balanceText.setToolTipText("Balance");
         creditText.setToolTipText("Credit");
         nameText.setToolTipText("Name");
@@ -83,7 +83,6 @@ public class AccountGUIwithRadio extends JFrame {
         JRadioButton mButton = new JRadioButton("Male");
         mButton.setActionCommand("male");
 
-
         // 'Female' Button
         JRadioButton fButton = new JRadioButton("Female");
         fButton.setActionCommand("female");
@@ -91,7 +90,6 @@ public class AccountGUIwithRadio extends JFrame {
         // Add radio buttons to the button group
         buttonGroup.add(mButton);
         buttonGroup.add(fButton);
-
 
         /*
        * Sets the layout
@@ -119,9 +117,6 @@ public class AccountGUIwithRadio extends JFrame {
         con.add(submitButton);
         con.add(error);
 
-        
-        
-        
         submitButton.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
@@ -160,7 +155,6 @@ public class AccountGUIwithRadio extends JFrame {
            	    try {
 					myWriter = new PrintWriter("Account.txt");
 				} catch (FileNotFoundException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
            	    
@@ -218,9 +212,13 @@ public class AccountGUIwithRadio extends JFrame {
         setLocation(210,150);
         setSize(400, 300);
         setVisible(true);
+        setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static void main(String [] args)
     {
-        AccountGUIwithRadio newAccount = new Accou
+        AccountGUIwithRadio newAccount = new AccountGUIwithRadio();
+
+    }
+}
