@@ -65,19 +65,34 @@ public class Account{
     public void showAddAndName() {
         System.out.println("name = " + accountHolderName + "\n" + "address =" + accountHolderAddress);
     }
+    /**
+     * Show the account holder name, the address of account's holder, the current balance and the credit limit
+     */
     public void showAll() {
         System.out.println("name = " + accountHolderName + "\n" + "address =" + accountHolderAddress + "\n" + "gender = "+gender);
         System.out.println("balance = " + currentBalance + " credit = " + creditLimit);
     }
+    /**
+     * Set the account's holder name
+     */
     public void setName(String name){
         accountHolderName = name;
     }
+    /**
+     * Get the account's holder name
+     */
     public String getName() {
         return accountHolderName;
     }
+    /**
+     * Set the account's holder address
+     */
     public void setAddress(String address){
         accountHolderAddress = address;
     }
+    /**
+     * Get the account's holder address
+     */
     public String getAddress() {
         return accountHolderAddress;
     }

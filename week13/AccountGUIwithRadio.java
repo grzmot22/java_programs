@@ -223,7 +223,4 @@ public class AccountGUIwithRadio extends JFrame {
 
     public static void main(String [] args)
     {
-        AccountGUIwithRadio newAccount = new AccountGUIwithRadio();
-
-    }
-}
+        AccountGUIwithRadio newAccount = new Accou
